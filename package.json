@@ -9,6 +9,12 @@
     "name": "Tesla Hunt",
     "url": "https://teslahunt.io"
   },
+  "contributors": [
+    {
+      "name": "Kiko Beats",
+      "email": "josefrancisco.verdu@gmail.com"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/teslahunt/images.git"
@@ -16,11 +22,6 @@
   "bugs": {
     "url": "https://github.com/teslahunt/images/issues"
   },
-  "files": [
-    "index.js",
-    "inventory.js",
-    "generate.js"
-  ],
   "keywords": [],
   "dependencies": {
     "cheerio": "~1.0.0-rc.5",
@@ -33,6 +34,7 @@
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "ava": "latest",
+    "ci-publish": "latest",
     "conventional-github-releaser": "latest",
     "coveralls": "latest",
     "finepack": "latest",
@@ -45,12 +47,16 @@
     "prettier-standard": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
-    "standard-version": "latest",
-    "ci-publish": "latest"
+    "standard-version": "latest"
   },
   "engines": {
     "node": ">= 12"
   },
+  "files": [
+    "generate.js",
+    "index.js",
+    "inventory.js"
+  ],
   "scripts": {
     "clean": "rm -rf node_modules",
     "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
