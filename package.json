@@ -1,0 +1,91 @@
+{
+  "name": "images",
+  "description": "Get Tesla vehicles images from Tesla inventory or 3D visualization",
+  "homepage": "https://nicedoc.io/teslahunt/images",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": {
+    "email": "hello@teslahunt.io",
+    "name": "Tesla Hunt",
+    "url": "https://teslahunt.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teslahunt/images.git"
+  },
+  "bugs": {
+    "url": "https://github.com/teslahunt/images/issues"
+  },
+  "files": [
+    "index.js",
+    "inventory.js",
+    "generate.js"
+  ],
+  "keywords": [],
+  "dependencies": {
+    "cheerio": "~1.0.0-rc.5",
+    "got": "~11.8.1",
+    "p-reflect": "~2.1.0",
+    "qsm": "~2.1.2",
+    "reachable-url": "~1.4.20"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "ava": "latest",
+    "conventional-github-releaser": "latest",
+    "coveralls": "latest",
+    "finepack": "latest",
+    "git-authors-cli": "latest",
+    "git-dirty": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "npm-check-updates": "latest",
+    "nyc": "latest",
+    "prettier-standard": "latest",
+    "standard": "latest",
+    "standard-markdown": "latest",
+    "standard-version": "latest"
+  },
+  "engines": {
+    "node": ">= 12"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "lint": "standard-markdown README.md && standard",
+    "postrelease": "npm run release:tags && npm run release:github && npm publish",
+    "prerelease": "git-dirty && npm run update:check && npm test && npm run contributors",
+    "pretest": "npm run lint",
+    "release": "git-authors-cli finepack && git add package.json && standard-version -a",
+    "release:github": "conventional-github-releaser -p angular",
+    "release:tags": "git push --follow-tags origin master",
+    "test": "nyc ava",
+    "update": "ncu -u",
+    "update:check": "ncu -- --error-level 2"
+  },
+  "license": "MIT",
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "package.json": [
+      "finepack"
+    ],
+    "*.js": [
+      "prettier-standard"
+    ],
+    "*.md": [
+      "standard-markdown"
+    ]
+  }
+}
