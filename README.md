@@ -30,11 +30,13 @@ This library combines both techniques providers, fallbacking one in the other on
 ```js
 const getImages = require('tesla-images')
 
-const images = await getImages({
-  vin: '5YJSA7H21FF084652',
-  modelLetter: 'S',
-  optionCodes: [ 'ADPX2', 'AU01', 'DA02', 'APH1', 'APD2', 'X028' ]
-})
+;(async () => {
+  const images = await getImages({
+    vin: '5YJSA7H21FF084652',
+    modelLetter: 'S',
+    optionCodes: ['ADPX2', 'AU01', 'DA02', 'APH1', 'APD2', 'X028']
+  })
+})()
 ```
 
 ## License
