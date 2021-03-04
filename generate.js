@@ -124,7 +124,7 @@ const getViewAngles = ({ optionCodes, model }) => {
 }
 
 module.exports = ({ optionCodes, modelLetter }) => {
-  const model = `m${modelLetter.toLowerCase()}`
+  const model = `m${modelLetter.toString().toLowerCase()}`
   const viewAngles = getViewAngles({ optionCodes, model })
 
   const result = viewAngles.map(view =>

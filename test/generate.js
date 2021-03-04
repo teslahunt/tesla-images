@@ -16,7 +16,7 @@ const generate = require('../generate')
 
 test('Model 3', async t => {
   const photos = generate({
-    model: 'm3',
+    modelLetter: 3,
     optionCodes: [
       'AD15',
       'AF00',
@@ -84,7 +84,7 @@ test('Model 3', async t => {
 
 test('Model 3 2021', async t => {
   const photos = generate({
-    model: 'm3',
+    modelLetter: '3',
     optionCodes: [
       'AD15',
       'AF00',
@@ -155,7 +155,7 @@ test('Model 3 2021', async t => {
 
 test('Model X', async t => {
   const photos = generate({
-    model: 'mx',
+    modelLetter: 'x',
     optionCodes: [
       'BP00',
       'AH01',
@@ -237,7 +237,7 @@ test('Model X', async t => {
 
 test('Model S', async t => {
   const photos = generate({
-    model: 'ms',
+    modelLetter: 's',
     optionCodes: [
       'BP00',
       'ADPX2',
