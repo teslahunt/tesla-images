@@ -29,11 +29,11 @@
     "teslamotors"
   ],
   "dependencies": {
-    "cheerio": "~1.0.0-rc.5",
-    "got": "~11.8.1",
     "p-reflect": "~2.1.0",
+    "cheerio": "~1.0.0-rc.10",
+    "got": "~11.8.2",
     "qsm": "~2.1.2",
-    "reachable-url": "~1.4.20"
+    "reachable-url": "~1.5.1"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
@@ -41,7 +41,6 @@
     "ava": "latest",
     "ci-publish": "latest",
     "conventional-github-releaser": "latest",
-    "coveralls": "latest",
     "finepack": "latest",
     "git-authors-cli": "latest",
     "git-dirty": "latest",
@@ -65,7 +64,6 @@
   "scripts": {
     "clean": "rm -rf node_modules",
     "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard-markdown README.md && standard",
     "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
     "prerelease": "npm run update:check && npm run contributors",
