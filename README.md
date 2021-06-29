@@ -4,10 +4,7 @@
 </div>
 
 ![Last version](https://img.shields.io/github/tag/teslahunt/tesla-images.svg?style=flat-square)
-[![Build Status](https://img.shields.io/travis/com/teslahunt/tesla-images/master.svg?style=flat-square)](https://travis-ci.com/teslahunt/tesla-images)
 [![Coverage Status](https://img.shields.io/coveralls/teslahunt/tesla-images.svg?style=flat-square)](https://coveralls.io/github/teslahunt/tesla-images)
-[![Dependency status](https://img.shields.io/david/teslahunt/tesla-images.svg?style=flat-square)](https://david-dm.org/teslahunt/tesla-images)
-[![Dev Dependencies Status](https://img.shields.io/david/dev/teslahunt/tesla-images.svg?style=flat-square)](https://david-dm.org/teslahunt/tesla-images#info=devDependencies)
 [![NPM Status](https://img.shields.io/npm/dm/tesla-images.svg?style=flat-square)](https://www.npmjs.org/package/tesla-images)
 
 > Get Tesla vehicles images from Tesla inventory or 3D visualization.

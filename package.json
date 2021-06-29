@@ -1,7 +1,7 @@
 {
   "name": "tesla-images",
   "description": "Get Tesla vehicles images from Tesla inventory or 3D visualization",
-  "homepage": "https://nicedoc.io/teslahunt/images",
+  "homepage": "https://nicedoc.io/teslahunt/tesla-images",
   "version": "1.0.2",
   "main": "index.js",
   "author": {
@@ -17,23 +17,24 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/teslahunt/images.git"
+    "url": "git+https://github.com/teslahunt/tesla-images.git"
   },
   "bugs": {
-    "url": "https://github.com/teslahunt/images/issues"
+    "url": "https://github.com/teslahunt/tesla-images/issues"
   },
   "keywords": [
+    "images",
     "tesla",
     "tesla-api",
     "teslaapi",
     "teslamotors"
   ],
   "dependencies": {
-    "cheerio": "~1.0.0-rc.5",
-    "got": "~11.8.1",
+    "cheerio": "~1.0.0-rc.10",
+    "got": "~11.8.2",
     "p-reflect": "~2.1.0",
     "qsm": "~2.1.2",
-    "reachable-url": "~1.4.20"
+    "reachable-url": "~1.5.1"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
@@ -41,7 +42,6 @@
     "ava": "latest",
     "ci-publish": "latest",
     "conventional-github-releaser": "latest",
-    "coveralls": "latest",
     "finepack": "latest",
     "git-authors-cli": "latest",
     "git-dirty": "latest",
@@ -65,7 +65,6 @@
   "scripts": {
     "clean": "rm -rf node_modules",
     "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard-markdown README.md && standard",
     "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
     "prerelease": "npm run update:check && npm run contributors",
