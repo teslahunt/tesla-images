@@ -34,7 +34,7 @@
     "got": "~11.8.2",
     "p-reflect": "~2.1.0",
     "qsm": "~2.1.2",
-    "reachable-url": "~1.5.1"
+    "reachable-url": "~1.6.0"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
