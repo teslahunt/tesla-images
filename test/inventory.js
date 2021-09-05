@@ -11,7 +11,10 @@ test('provided a VIN that can be resolved', async t => {
 })
 
 test("provided a VIN that can't be resolved", async t => {
-  const images = await inventory('5YJSA7H48FF087307')
+  const images = await inventory('5YJSA7H48FF087307', {
+    followRedirect: false,
+    retry: 0
+  })
   t.true(Array.isArray(images))
   t.is(images.length, 0)
 })
