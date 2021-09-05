@@ -88,7 +88,7 @@ test('Model 3', async t => {
   t.snapshot(photos)
 })
 
-test('Model 3 2021', async t => {
+test('Model 3 2021 (chrome delete)', async t => {
   const photos = generate({
     modelLetter: '3',
     optionCodes: [
@@ -241,6 +241,16 @@ test('Model X', async t => {
   t.snapshot(photos)
 })
 
+test('Model X Plaid', async t => {
+  const photos = generate({
+    modelLetter: 'x',
+    optionCodes: ['MTX10', 'PPSW', 'WX00', 'IBE00', 'ST0Y']
+  })
+
+  t.true(await isAllReachable(photos))
+  t.snapshot(photos)
+})
+
 test('Model S', async t => {
   const photos = generate({
     modelLetter: 's',
@@ -308,6 +318,16 @@ test('Model S', async t => {
       'YFFC',
       'CPF1'
     ]
+  })
+
+  t.true(await isAllReachable(photos))
+  t.snapshot(photos)
+})
+
+test('Model S Plaid', async t => {
+  const photos = generate({
+    modelLetter: 's',
+    optionCodes: ['MTS10', 'PPSW', 'WS90', 'IBE00', 'ST0Y']
   })
 
   t.true(await isAllReachable(photos))
