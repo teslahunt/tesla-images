@@ -2,16 +2,8 @@
 
 const qsm = require('qsm')
 
-const M3_VIEW_ANGLES = ['STUD_3QTR', 'STUD_REAR', 'STUD_SEAT']
-
-// STUD_FRONT34 // equal to `STUD_3QTR`
-// STUD_SIDEVIEW
-// STUD_REAR34
-// STUD_RIMCLOSEUP
-// STUD_INTERIOR
-
 const VIEW_ANGLES = ['STUD_3QTR', 'STUD_REAR', 'STUD_SEAT']
-const VIEW_ANGLES_V2 = ['STUD_3QTR_V2', 'REAR34', 'STUD_SEAT_V2']
+const VIEW_ANGLES_V2 = ['STUD_3QTR', 'REAR34', 'STUD_SEAT']
 
 const M3_OPTIONS_CODES = [
   'MT3',
@@ -114,7 +106,8 @@ const getOptions = ({ optionCodes, model }) => {
 }
 
 const getViewAngles = ({ optionCodes, model }) => {
-  if (model === 'm3') return M3_VIEW_ANGLES
+  if (model === 'my') return VIEW_ANGLES_V2
+  if (model === 'm3') return VIEW_ANGLES
 
   if (model === 'mx' && optionCodes.some(code => code.startsWith('MTX'))) {
     return VIEW_ANGLES_V2

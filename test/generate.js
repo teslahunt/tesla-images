@@ -333,3 +333,13 @@ test('Model S Plaid', async t => {
   t.true(await isAllReachable(photos))
   t.snapshot(photos)
 })
+
+test('Model Y', async t => {
+  const photos = generate({
+    modelLetter: 'y',
+    optionCodes: ['MTY07', 'PPSW', 'WY19B', 'INPB0']
+  })
+
+  t.true(await isAllReachable(photos))
+  t.snapshot(photos)
+})
