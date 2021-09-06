@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.1.0 (2021-09-06)
+
+
+### Features
+
+* add Model Y ([9950611](https://github.com/teslahunt/tesla-images/commit/9950611e485fa947c49c17cfad68f9be157d1624))
+
 ### 1.0.5 (2021-09-05)
 
 ### [1.0.4](https://github.com/teslahunt/tesla-images/compare/v1.0.3...v1.0.4) (2021-07-17)
