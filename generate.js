@@ -1,89 +1,14 @@
 'use strict'
 
-const qsm = require('qsm')
+const { URL } = require('url')
 
-const VIEW_ANGLES = ['STUD_3QTR', 'STUD_SEAT']
-const VIEW_ANGLES_V2 = ['STUD_3QTR', 'REAR34', 'STUD_SEAT']
-
-const M3_OPTIONS_CODES = [
-  'MT3',
-  'W3',
-  'W4',
-  'PBSB',
-  'PMNG',
-  'PMSS',
-  'PPMR',
-  'PPSB',
-  'PPSW'
-]
-
-const M3_OLD_INTERIOR = [
-  'IN3B2',
-  'IN3BB',
-  'IN3BW',
-  'IN3PB',
-  'IN3PW',
-  'INB3C',
-  'INB3P',
-  'INBBP',
-  'INBBW',
-  'INBC3P',
-  'INBC3W',
-  'INBCW',
-  'INBFP',
-  'INBFW',
-  'INBLB',
-  'INBLW',
-  'INBP3P',
-  'INBP3W',
-  'INBPB',
-  'INBPC',
-  'INBPP',
-  'INBPW',
-  'INBTB',
-  'INBWS',
-  'INFBP',
-  'INLFC',
-  'INLFP',
-  'INLPC',
-  'INLPP',
-  'INPTB',
-  'INWLT',
-  'INWPB',
-  'INWPT',
-  'INYPB',
-  'INYPW',
-  'IPB0',
-  'IPB1',
-  'IPW0',
-  'IPW1',
-  'IVBPP',
-  'IVBSW',
-  'IVBTB',
-  'IVLPC',
-  'QPBT',
-  'QPMB',
-  'QPMG',
-  'QPMT',
-  'QPMW',
-  'QTFC',
-  'QTFP',
-  'QTFW',
-  'QTPB',
-  'QTPC',
-  'QTPP',
-  'QTPT',
-  'QTPW',
-  'QTSW',
-  'QTTB',
-  'QTVB',
-  'QTVT',
-  'QTWS',
-  'QXMB',
-  'QXMG'
-]
-
-const M3_NEW_INTERIOR = ['IBB0', 'IBB1', 'IBW0', 'IBW1']
+const {
+  VIEW_ANGLES,
+  VIEW_ANGLES_V2,
+  M3_OPTIONS_CODES,
+  M3_OLD_INTERIOR,
+  M3_NEW_INTERIOR
+} = require('./constants')
 
 const pickFromArray = (orig, dist) =>
   orig.reduce((acc, item) => {
@@ -106,7 +31,7 @@ const getOptions = ({ optionCodes, model }) => {
 }
 
 const getViewAngles = ({ optionCodes, model }) => {
-  if (model === 'my') return VIEW_ANGLES_V2
+  // if (model === 'my') return VIEW_ANGLES_V2
   if (model === 'm3') return VIEW_ANGLES
 
   if (model === 'mx' && optionCodes.some(code => code.startsWith('MTX'))) {
@@ -124,20 +49,22 @@ module.exports = ({ optionCodes, modelLetter }) => {
   const model = `m${modelLetter.toString().toLowerCase()}`
   const viewAngles = getViewAngles({ optionCodes, model })
 
-  const result = viewAngles.map(view =>
-    qsm.add('https://static-assets.tesla.com/configurator/compositor', {
-      model,
-      options: getOptions({ optionCodes, model })
+  return viewAngles.map(view => {
+    const url = new URL(
+      'https://static-assets.tesla.com/configurator/compositor'
+    )
+    url.searchParams.set('bkba_opt', '2')
+    url.searchParams.set('file_type', 'jpg')
+    url.searchParams.set('model', model)
+    url.searchParams.set(
+      'options',
+      getOptions({ optionCodes, model })
         .sort()
-        .toString(),
-      view,
-      file_type: 'jpg',
-      size: '800',
-      bkba_opt: '2'
-      // version: '0.0.25',
-      // context: 'design_studio_2'
-    })
-  )
+        .toString()
+    )
+    url.searchParams.set('size', '800')
+    url.searchParams.set('view', view)
 
-  return result
+    return url.toString()
+  })
 }
