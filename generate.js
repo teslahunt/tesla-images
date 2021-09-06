@@ -26,26 +26,25 @@ const getViewAngles = ({ optionCodes, model }) => {
   return VIEW_ANGLES
 }
 
+const url = new URL('https://static-assets.tesla.com/configurator/compositor')
+url.searchParams.set('bkba_opt', '2')
+url.searchParams.set('file_type', 'jpg')
+
 module.exports = ({ optionCodes, modelLetter }) => {
   const model = `m${modelLetter.toString().toLowerCase()}`
   const viewAngles = getViewAngles({ optionCodes, model })
 
-  return viewAngles.map(view => {
-    const url = new URL(
-      'https://static-assets.tesla.com/configurator/compositor'
-    )
-    url.searchParams.set('bkba_opt', '2')
-    url.searchParams.set('file_type', 'jpg')
-    url.searchParams.set('model', model)
-    url.searchParams.set(
-      'options',
-      getOptions({ optionCodes, model })
-        .sort()
-        .toString()
-    )
-    url.searchParams.set('size', '800')
-    url.searchParams.set('view', view)
+  url.searchParams.set('model', model)
+  url.searchParams.set(
+    'options',
+    getOptions({ optionCodes, model })
+      .sort()
+      .toString()
+  )
+  url.searchParams.set('size', '800')
 
+  return viewAngles.map(view => {
+    url.searchParams.set('view', view)
     return url.toString()
   })
 }
