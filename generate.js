@@ -2,13 +2,7 @@
 
 const { URL } = require('url')
 
-const {
-  VIEW_ANGLES,
-  VIEW_ANGLES_V2,
-  M3_OPTIONS_CODES,
-  M3_OLD_INTERIOR,
-  M3_NEW_INTERIOR
-} = require('./constants')
+const { VIEW_ANGLES, VIEW_ANGLES_V2, M3_OPTIONS_CODES } = require('./constants')
 
 const pickFromArray = (orig, dist) =>
   orig.reduce((acc, item) => {
@@ -16,32 +10,19 @@ const pickFromArray = (orig, dist) =>
     return isPresent ? [...acc, item] : acc
   }, [])
 
-const getModel3options = optionCodes => {
-  const options = pickFromArray(
-    optionCodes,
-    M3_OPTIONS_CODES.concat(M3_OLD_INTERIOR, M3_NEW_INTERIOR)
-  )
-
-  return options
-}
+const hasOptionCode = (optionCode, optionCodes) =>
+  optionCodes.some(code => code.startsWith(optionCode))
 
 const getOptions = ({ optionCodes, model }) => {
-  if (model === 'm3') return getModel3options(optionCodes)
+  if (model === 'm3') return pickFromArray(optionCodes, M3_OPTIONS_CODES)
   return optionCodes
 }
 
 const getViewAngles = ({ optionCodes, model }) => {
   // if (model === 'my') return VIEW_ANGLES_V2
   if (model === 'm3') return VIEW_ANGLES
-
-  if (model === 'mx' && optionCodes.some(code => code.startsWith('MTX'))) {
-    return VIEW_ANGLES_V2
-  }
-
-  if (model === 'ms' && optionCodes.some(code => code.startsWith('MTS'))) {
-    return VIEW_ANGLES_V2
-  }
-
+  if (model === 'mx' && hasOptionCode('MTX', optionCodes)) return VIEW_ANGLES_V2
+  if (model === 'ms' && hasOptionCode('MTS', optionCodes)) return VIEW_ANGLES_V2
   return VIEW_ANGLES
 }
 
