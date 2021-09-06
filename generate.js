@@ -2,7 +2,7 @@
 
 const qsm = require('qsm')
 
-const VIEW_ANGLES = ['STUD_3QTR', 'STUD_REAR', 'STUD_SEAT']
+const VIEW_ANGLES = ['STUD_3QTR', 'STUD_SEAT']
 const VIEW_ANGLES_V2 = ['STUD_3QTR', 'REAR34', 'STUD_SEAT']
 
 const M3_OPTIONS_CODES = [
