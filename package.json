@@ -76,6 +76,12 @@
     "update:check": "ncu -- --error-level 2"
   },
   "license": "MIT",
+  "ava": {
+    "files": [
+      "test/**/*.js",
+      "!test/util.js"
+    ]
+  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
