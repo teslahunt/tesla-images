@@ -2,7 +2,7 @@
   "name": "tesla-images",
   "description": "Get Tesla vehicles images from Tesla inventory or 3D visualization",
   "homepage": "https://nicedoc.io/teslahunt/tesla-images",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "main": "index.js",
   "author": {
     "email": "hello@teslahunt.io",
