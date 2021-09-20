@@ -1,7 +1,7 @@
 'use strict'
 
 const VIEW_ANGLES = ['STUD_3QTR', 'STUD_SEAT']
-const VIEW_ANGLES_V2 = ['STUD_3QTR', 'REAR34', 'STUD_SEAT']
+const VIEW_ANGLES_V2 = ['STUD_3QTR', 'STUD_SEAT']
 
 const PAINT_CODES = ['PBSB', 'PMNG', 'PMSS', 'PPMR', 'PPSB', 'PPSW']
 
