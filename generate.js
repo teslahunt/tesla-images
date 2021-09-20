@@ -8,7 +8,6 @@ const {
   VIEW_ANGLES_V2,
   M3_OPTIONS_CODES,
   M3_INTERIOR_CODES,
-  M3_INTERIOR_DEFAULT,
   MY_OPTIONS_CODES
 } = require('./constants')
 
@@ -27,15 +26,22 @@ const hasOptionCode = (optionCode, optionCodes) =>
 const getOptions = ({ optionCodes, model }) => {
   switch (model) {
     case 'm3': {
-      optionCodes = pickFromArray(optionCodes, M3_OPTIONS_CODES)
+      const pickedOptionCodes = pickFromArray(optionCodes, M3_OPTIONS_CODES)
 
       const hasInterior = M3_INTERIOR_CODES.some(optionCode =>
-        hasOptionCode(optionCode, optionCodes)
+        hasOptionCode(optionCode, pickedOptionCodes)
       )
 
+      if (hasInterior) return pickedOptionCodes
+
+      const isRefresh =
+        !optionCodes.includes('MI00') && !optionCodes.includes('MI01')
+
       return hasInterior
-        ? optionCodes
-        : [M3_INTERIOR_DEFAULT].concat(optionCodes)
+        ? pickedOptionCodes
+        : isRefresh
+        ? ['IBB1'].concat(pickedOptionCodes)
+        : ['IN3PB'].concat(pickedOptionCodes)
     }
 
     case 'my': {
