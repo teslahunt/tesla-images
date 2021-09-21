@@ -35,9 +35,11 @@ const getOptions = ({ optionCodes, model }) => {
 
       if (hasInterior) return pickedOptionCodes
 
-      const isRefresh = !M3_NON_REFRESH.some(optionCode =>
-        hasOptionCode(optionCode, optionCodes)
-      )
+      const isRefresh =
+        hasOptionCode('MT', optionCodes) &&
+        !M3_NON_REFRESH.some(optionCode =>
+          hasOptionCode(optionCode, optionCodes)
+        )
 
       return hasInterior
         ? pickedOptionCodes

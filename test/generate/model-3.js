@@ -52,6 +52,65 @@ test('Model 3 2018', async t => {
   t.snapshot(photos)
 })
 
+test('Model 3 2019', async t => {
+  const photos = generate({
+    modelLetter: 3,
+    optionCodes: [
+      'AD15',
+      'AF00',
+      'APFB',
+      'APH3',
+      'AU3P',
+      'BC3B',
+      'BT37',
+      'CDM0',
+      'CH06',
+      'COAT',
+      'DRLH',
+      'DV2W',
+      'FC3P',
+      'FG31',
+      'FM3B',
+      'GLFR',
+      'HL31',
+      'HM31',
+      'ID3W',
+      'IL31',
+      'LTPB',
+      'MDL3',
+      'MR31',
+      'PBSB',
+      'PC30',
+      'REEU',
+      'RF3G',
+      'RS3H',
+      'S3PB',
+      'SA3P',
+      'SC04',
+      'STCP',
+      'SU3C',
+      'T3MS',
+      'TM00',
+      'TW00',
+      'UT3P',
+      'W38B',
+      'WR00',
+      'ZINV',
+      'MI00',
+      'PL30',
+      'SLR0',
+      'ST31',
+      'BG30',
+      'I38M',
+      'OSSB',
+      'RSF1',
+      'CPF0'
+    ]
+  })
+  t.true(await isAllReachable(photos))
+  t.snapshot(photos)
+})
+
 test('Model 3 2019 MT301', async t => {
   const photos = generate({
     modelLetter: 3,
