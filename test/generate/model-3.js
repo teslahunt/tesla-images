@@ -318,6 +318,83 @@ test('Model 3 2020 MT336', async t => {
   t.snapshot(photos)
 })
 
+test('Model 3 2021 MT322', async t => {
+  const photos = generate({
+    modelLetter: 3,
+    optionCodes: [
+      'AD15',
+      'AF00',
+      'APFB',
+      'APH4',
+      'AU3D',
+      'BC3B',
+      'BTF1',
+      'RNG0',
+      'CDM0',
+      'CH15',
+      'COFR',
+      'DRLH',
+      'DV2W',
+      'FC02',
+      'FG3B',
+      'FM3S',
+      'GLCN',
+      'HL32',
+      'HM30',
+      'ID3W',
+      'IL31',
+      'LT03',
+      'MDL3',
+      'MR31',
+      'PPSW',
+      'PC30',
+      'REEU',
+      'RF3G',
+      'RS3H',
+      'S3PB',
+      'SA3P',
+      'SC04',
+      'STCP',
+      'SU3C',
+      'T3HS',
+      'TM00',
+      'TW00',
+      'UT3P',
+      'W41B',
+      'WR00',
+      'ZINV',
+      'MI02',
+      'PL30',
+      'SLR0',
+      'ST33',
+      'BG30',
+      'OSSB',
+      'AUF2',
+      'RSF0',
+      'ILF0',
+      'FGF0',
+      'CPF0',
+      'P3WS',
+      'HP31',
+      'PT01',
+      'RL31',
+      'LVB1',
+      'RD06',
+      'SWF0',
+      'PP02',
+      'VC00',
+      'LS01',
+      'APBS',
+      'IBB1',
+      'PRM30',
+      'MT322'
+    ]
+  })
+
+  t.true(await isAllReachable(photos))
+  t.snapshot(photos)
+})
+
 test('Model 3 2021', async t => {
   const photos = generate({
     modelLetter: 3,
