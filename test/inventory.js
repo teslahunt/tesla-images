@@ -5,7 +5,8 @@ const test = require('ava')
 const inventory = require('../inventory')
 
 test('provided a VIN that can be resolved', async t => {
-  const images = await inventory('5YJSA1H15EFP65786')
+  t.timeout(5000)
+  const images = await inventory('5YJ3E7EB8KF239236')
   t.true(Array.isArray(images))
   t.true(images.length > 0)
 })
