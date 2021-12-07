@@ -7,7 +7,7 @@
 [![Coverage Status](https://img.shields.io/coveralls/teslahunt/tesla-images.svg?style=flat-square)](https://coveralls.io/github/teslahunt/tesla-images)
 [![NPM Status](https://img.shields.io/npm/dm/tesla-images.svg?style=flat-square)](https://www.npmjs.org/package/tesla-images)
 
-> Get Tesla vehicles images from Tesla inventory or 3D visualization.
+> Generate Tesla Model S/3/X/Y 3D photo visualizations.
 
 ## Install
 

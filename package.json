@@ -1,6 +1,6 @@
 {
   "name": "tesla-images",
-  "description": "Get Tesla vehicles images from Tesla inventory or 3D visualization",
+  "description": "Generate Tesla Model S/3/X/Y 3D photo visualizations",
   "homepage": "https://nicedoc.io/teslahunt/tesla-images",
   "version": "1.2.5",
   "main": "index.js",
@@ -23,16 +23,27 @@
     "url": "https://github.com/teslahunt/tesla-images/issues"
   },
   "keywords": [
+    "3d",
+    "gallery",
+    "generation",
     "images",
+    "model-3",
+    "model-s",
+    "model-x",
+    "model-y",
+    "model3",
+    "models",
+    "modelx",
+    "modely",
+    "photo",
     "tesla",
     "tesla-api",
     "teslaapi",
-    "teslamotors"
+    "teslamotors",
+    "visualization",
+    "viz"
   ],
   "dependencies": {
-    "cheerio": "~1.0.0-rc.10",
-    "got": "~11.8.2",
-    "p-reflect": "~2.1.0",
     "reachable-url": "~1.6.3"
   },
   "devDependencies": {
@@ -46,6 +57,7 @@
     "nano-staged": "latest",
     "npm-check-updates": "latest",
     "nyc": "latest",
+    "p-map": "4",
     "prettier-standard": "latest",
     "simple-git-hooks": "latest",
     "standard": "latest",
@@ -58,8 +70,7 @@
   "files": [
     "constants.js",
     "generate.js",
-    "index.js",
-    "inventory.js"
+    "index.js"
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
