@@ -57,7 +57,7 @@
     "nano-staged": "latest",
     "npm-check-updates": "latest",
     "nyc": "latest",
-    "p-map": "4",
+    "p-map": "5",
     "prettier-standard": "latest",
     "simple-git-hooks": "latest",
     "standard": "latest",
