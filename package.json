@@ -2,7 +2,7 @@
   "name": "tesla-images",
   "description": "Generate Tesla Model S/3/X/Y 3D photo visualizations",
   "homepage": "https://nicedoc.io/teslahunt/tesla-images",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "main": "index.js",
   "author": {
     "email": "hello@teslahunt.io",
