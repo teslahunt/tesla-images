@@ -15,7 +15,8 @@ const {
 const pickFromArray = (orig, dist) =>
   orig.reduce((acc, item) => {
     const isPresent = dist.some(code => item.startsWith(code))
-    return isPresent ? [...acc, item] : acc
+    if (isPresent) acc.push(item)
+    return acc
   }, [])
 
 const isFirstGeneration = optionCodes =>
