@@ -89,8 +89,8 @@
   "license": "MIT",
   "ava": {
     "files": [
-      "test/**/*.js",
-      "!test/util.js"
+      "!test/util.js",
+      "test/**/*.js"
     ]
   },
   "commitlint": {
