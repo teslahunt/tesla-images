@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.3.0 (2022-03-13)
+
+
+### Features
+
+* export generated image as main method ([7d55b4f](https://github.com/teslahunt/tesla-images/commit/7d55b4fdb8d211d60ffd6028fc968415a59aa13d)), closes [#5](https://github.com/teslahunt/tesla-images/issues/5)
+
 ### 1.2.9 (2022-03-02)
 
 ### 1.2.8 (2022-02-25)
