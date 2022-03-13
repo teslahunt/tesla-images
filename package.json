@@ -3,7 +3,7 @@
   "description": "Generate Tesla Model S/3/X/Y 3D photo visualizations",
   "homepage": "https://nicedoc.io/teslahunt/tesla-images",
   "version": "1.2.9",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": {
     "email": "hello@teslahunt.io",
     "name": "Tesla Hunt",
@@ -68,9 +68,7 @@
     "node": ">= 12"
   },
   "files": [
-    "constants.js",
-    "generate.js",
-    "index.js"
+    "src"
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
@@ -89,8 +87,8 @@
   "license": "MIT",
   "ava": {
     "files": [
-      "!test/util.js",
-      "test/**/*.js"
+      "test/**/*.js",
+      "!test/util.js"
     ]
   },
   "commitlint": {

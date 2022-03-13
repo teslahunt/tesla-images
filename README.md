@@ -25,10 +25,10 @@ There are two ways for getting Tesla stock images:
 This library combines both techniques providers, fallbacking one in the other one in case stock images are missing (that is the most probable thing).
 
 ```js
-const getImages = require('tesla-images')
+const teslaImages = require('tesla-images')
 
 ;(async () => {
-  const images = await getImages({
+  const images = await teslaImages({
     vin: '5YJSA7H21FF084652',
     modelLetter: 'S',
     optionCodes: ['ADPX2', 'AU01', 'DA02', 'APH1', 'APD2', 'X028']

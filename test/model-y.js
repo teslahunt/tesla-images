@@ -2,12 +2,12 @@
 
 const test = require('ava')
 
-const generate = require('../../generate')
+const teslaImages = require('..')
 
-const { isAllReachable } = require('../util')
+const { isAllReachable } = require('./util')
 
 test('Model Y', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 'y',
     optionCodes: [
       'AD15',

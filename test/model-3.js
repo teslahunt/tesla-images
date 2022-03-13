@@ -2,12 +2,12 @@
 
 const test = require('ava')
 
-const generate = require('../../generate')
+const teslaImages = require('..')
 
-const { isAllReachable } = require('../util')
+const { isAllReachable } = require('./util')
 
 test('Model 3 2017', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 3,
     optionCodes: [
       'APBS',
@@ -29,7 +29,7 @@ test('Model 3 2017', async t => {
 })
 
 test('Model 3 2018', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 3,
     optionCodes: [
       'APF2',
@@ -53,7 +53,7 @@ test('Model 3 2018', async t => {
 })
 
 test('Model 3 2019', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 3,
     optionCodes: [
       'AD15',
@@ -112,7 +112,7 @@ test('Model 3 2019', async t => {
 })
 
 test('Model 3 2019 MT301', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 3,
     optionCodes: [
       'AD15',
@@ -179,7 +179,7 @@ test('Model 3 2019 MT301', async t => {
 })
 
 test('Model 3 2019 MT302', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 3,
     optionCodes: [
       'AD15',
@@ -246,7 +246,7 @@ test('Model 3 2019 MT302', async t => {
 })
 
 test('Model 3 2020 MT336', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 3,
     optionCodes: [
       'AD15',
@@ -319,7 +319,7 @@ test('Model 3 2020 MT336', async t => {
 })
 
 test('Model 3 2021 MT322', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 3,
     optionCodes: [
       'AD15',
@@ -396,7 +396,7 @@ test('Model 3 2021 MT322', async t => {
 })
 
 test('Model 3 2021 MT323', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 3,
     optionCodes: [
       'AD15',
@@ -473,7 +473,7 @@ test('Model 3 2021 MT323', async t => {
 })
 
 test('Model 3 2021', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 3,
     optionCodes: [
       'AD15',

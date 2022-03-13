@@ -2,12 +2,12 @@
 
 const test = require('ava')
 
-const generate = require('../../generate')
+const teslaImages = require('..')
 
-const { isAllReachable } = require('../util')
+const { isAllReachable } = require('./util')
 
 test('Model X 2016', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 'x',
     optionCodes: [
       'BP00',
@@ -88,7 +88,7 @@ test('Model X 2016', async t => {
 })
 
 test('Model X 2017', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 'x',
     optionCodes: [
       'BP01',
@@ -172,7 +172,7 @@ test('Model X 2017', async t => {
 })
 
 test('Model X 2018', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 'x',
     optionCodes: [
       'BP02',
@@ -254,7 +254,7 @@ test('Model X 2018', async t => {
 })
 
 test('Model X 2019', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 'x',
     optionCodes: [
       'BP02',
@@ -336,7 +336,7 @@ test('Model X 2019', async t => {
 })
 
 test('Model X 2020', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 'x',
     optionCodes: [
       'MDLX',
@@ -427,7 +427,7 @@ test('Model X 2020', async t => {
 })
 
 test('Model X 2021', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 'x',
     optionCodes: [
       'MDLX',
@@ -521,7 +521,7 @@ test('Model X 2021', async t => {
 })
 
 test('Model X Plaid', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 'x',
     optionCodes: ['MTX10', 'PPSW', 'WX00', 'IBE00', 'ST0Y']
   })

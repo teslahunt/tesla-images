@@ -2,12 +2,12 @@
 
 const test = require('ava')
 
-const generate = require('../../generate')
+const teslaImages = require('..')
 
-const { isAllReachable } = require('../util')
+const { isAllReachable } = require('./util')
 
 test('Model S 2013', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 's',
     optionCodes: [
       'AD02',
@@ -58,7 +58,7 @@ test('Model S 2013', async t => {
   t.snapshot(photos)
 })
 test('Model S 2014', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 's',
     optionCodes: [
       'ADPX2',
@@ -123,7 +123,7 @@ test('Model S 2014', async t => {
 })
 
 test('Model S 2015', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 's',
     optionCodes: [
       'BP01',
@@ -193,7 +193,7 @@ test('Model S 2015', async t => {
 })
 
 test('Model S 2016', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 's',
     optionCodes: [
       'BP00',
@@ -263,7 +263,7 @@ test('Model S 2016', async t => {
 })
 
 test('Model S 2017', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 's',
     optionCodes: [
       'ADPX2',
@@ -338,7 +338,7 @@ test('Model S 2017', async t => {
 })
 
 test('Model S 2018', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 's',
     optionCodes: [
       'BP02',
@@ -413,7 +413,7 @@ test('Model S 2018', async t => {
 })
 
 test('Model S 2019', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 's',
     optionCodes: [
       'BP01',
@@ -486,7 +486,7 @@ test('Model S 2019', async t => {
 })
 
 test('Model S 2020', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 's',
     optionCodes: [
       'MDLS',
@@ -574,7 +574,7 @@ test('Model S 2020', async t => {
 })
 
 test('Model S 2021', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 's',
     optionCodes: [
       'MDLS',
@@ -661,7 +661,7 @@ test('Model S 2021', async t => {
 })
 
 test('Model S Plaid', async t => {
-  const photos = generate({
+  const photos = teslaImages({
     modelLetter: 's',
     optionCodes: ['MTS10', 'PPSW', 'WS90', 'IBE00', 'ST0Y']
   })

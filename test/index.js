@@ -2,12 +2,12 @@
 
 const test = require('ava')
 
-const generate = require('../../generate')
+const teslaImages = require('..')
 
 test('throw an error if model is not supported', t => {
   const error = t.throws(
     () =>
-      generate({
+      teslaImages({
         modelLetter: 'z'
       }),
     { instanceOf: TypeError }

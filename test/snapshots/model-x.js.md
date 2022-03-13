@@ -1,4 +1,4 @@
-# Snapshot report for `test/generate/model-x.js`
+# Snapshot report for `test/model-x.js`
 
 The actual snapshot is saved in `model-x.js.snap`.
 
