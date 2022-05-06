@@ -12,35 +12,35 @@ const {
   MY_OPTIONS_CODES
 } = require('./constants')
 
-const pickFromArray = (orig, dist) =>
+const pick = (orig, dist) =>
   orig.reduce((acc, item) => {
-    const isPresent = dist.some(code => item.startsWith(code))
+    const isPresent = dist.some(input => test(item, input))
     if (isPresent) acc.push(item)
     return acc
   }, [])
 
-const isFirstGeneration = optionCodes =>
-  optionCodes.includes('MI00') || !hasOptionCode('MI0', optionCodes)
+const has = (collection, input) => collection.some(item => test(item, input))
 
-const hasOptionCode = (optionCode, optionCodes) =>
-  optionCodes.some(code => code.startsWith(optionCode))
+const test = (input, partial) =>
+  input instanceof RegExp ? input.test(partial) : input.startsWith(partial)
+
+const isFirstGeneration = optionCodes =>
+  optionCodes.includes('MI00') || !has(optionCodes, 'MI0')
 
 const getOptions = ({ optionCodes, model }) => {
   switch (model) {
     case 'm3': {
-      const pickedOptionCodes = pickFromArray(optionCodes, M3_OPTIONS_CODES)
+      const pickedOptionCodes = pick(optionCodes, M3_OPTIONS_CODES)
 
       const hasInterior = M3_INTERIOR_CODES.some(optionCode =>
-        hasOptionCode(optionCode, pickedOptionCodes)
+        has(pickedOptionCodes, optionCode)
       )
 
       if (hasInterior) return pickedOptionCodes
 
       const isRefresh =
-        hasOptionCode('MT', optionCodes) &&
-        !M3_NON_REFRESH.some(optionCode =>
-          hasOptionCode(optionCode, optionCodes)
-        )
+        has(optionCodes, 'MT') &&
+        !M3_NON_REFRESH.some(optionCode => has(optionCodes, optionCode))
 
       return hasInterior
         ? pickedOptionCodes
@@ -48,7 +48,15 @@ const getOptions = ({ optionCodes, model }) => {
     }
 
     case 'my': {
-      return pickFromArray(optionCodes, MY_OPTIONS_CODES)
+      return pick(optionCodes, MY_OPTIONS_CODES)
+    }
+
+    case 'ms': {
+      const isRefresh = has(optionCodes, 'ST0Y')
+
+      return isRefresh
+        ? optionCodes.filter(optionCode => !test(optionCode, /IC/))
+        : optionCodes
     }
 
     default:
@@ -62,12 +70,12 @@ const getViewAngles = ({ optionCodes, model }) => {
   if (model === 'm3') return VIEW_ANGLES
 
   if (model === 'mx') {
-    if (hasOptionCode('MTX', optionCodes)) return VIEW_ANGLES_V2
+    if (has(optionCodes, 'MTX')) return VIEW_ANGLES_V2
     return ['STUD_3QTR', 'STUD_SEAT']
   }
 
   if (model === 'ms') {
-    if (hasOptionCode('MTS', optionCodes)) return VIEW_ANGLES_V2
+    if (has(optionCodes, 'MTS')) return VIEW_ANGLES_V2
     return isFirstGeneration(optionCodes) ? VIEW_ANGLES : VIEW_ANGLES_OLD
   }
 
