@@ -57,6 +57,7 @@ test('Model S 2013', async t => {
   t.true(await isAllReachable(photos))
   t.snapshot(photos)
 })
+
 test('Model S 2014', async t => {
   const photos = teslaImages({
     modelLetter: 's',
@@ -660,10 +661,59 @@ test('Model S 2021', async t => {
   t.snapshot(photos)
 })
 
-test('Model S Plaid', async t => {
+test('Model S Plaid MTS10', async t => {
   const photos = teslaImages({
     modelLetter: 's',
     optionCodes: ['MTS10', 'PPSW', 'WS90', 'IBE00', 'ST0Y']
+  })
+
+  t.true(await isAllReachable(photos))
+  t.snapshot(photos)
+})
+
+test('Model S Plaid MTS11', async t => {
+  const photos = teslaImages({
+    modelLetter: 's',
+    optionCodes: [
+      'APBS',
+      'APF2',
+      'APH4',
+      'BC00',
+      'BR00',
+      'BTXB',
+      'CH17',
+      'COCA',
+      'CP00',
+      'CPF1',
+      'DRLH',
+      'DV4W',
+      'FD03',
+      'FR05',
+      'HL00',
+      'IBC00',
+      'IC00',
+      'ID02',
+      'MDLS',
+      'MS06',
+      'MTS11',
+      'PPMR',
+      'RD04',
+      'RENA',
+      'RL00',
+      'SC04',
+      'ST0Y',
+      'SU03',
+      'TM00',
+      'TR00',
+      'TS91',
+      'TW00',
+      'USSB',
+      'WS90',
+      'X011',
+      'X013',
+      'X024',
+      'ZINV'
+    ]
   })
 
   t.true(await isAllReachable(photos))

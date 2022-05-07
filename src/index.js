@@ -22,7 +22,7 @@ const pick = (orig, dist) =>
 const has = (collection, input) => collection.some(item => test(item, input))
 
 const test = (input, partial) =>
-  input instanceof RegExp ? input.test(partial) : input.startsWith(partial)
+  partial instanceof RegExp ? partial.test(input) : input.startsWith(partial)
 
 const isFirstGeneration = optionCodes =>
   optionCodes.includes('MI00') || !has(optionCodes, 'MI0')
