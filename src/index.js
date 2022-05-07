@@ -55,7 +55,7 @@ const getOptions = ({ optionCodes, model }) => {
       const isRefresh = has(optionCodes, 'ST0Y')
 
       return isRefresh
-        ? optionCodes.filter(optionCode => !test(optionCode, /IC/))
+        ? optionCodes.filter(optionCode => !test(optionCode, /IC..$/))
         : optionCodes
     }
 
