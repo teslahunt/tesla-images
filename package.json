@@ -44,7 +44,7 @@
     "viz"
   ],
   "dependencies": {
-    "reachable-url": "~1.6.3"
+    "reachable-url": "~1.6.10"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
