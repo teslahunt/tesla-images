@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.3.5 (2022-06-07)
+
+
+### Bug Fixes
+
+* add missing colors ([799ca26](https://github.com/teslahunt/tesla-images/commit/799ca2630b7f1d5921b863539a4ca8bd3c866688))
+
 ### 1.3.4 (2022-05-12)
 
 ### 1.3.3 (2022-05-07)
