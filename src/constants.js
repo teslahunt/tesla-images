@@ -16,7 +16,23 @@ const VIEW_ANGLES_V2 = ['STUD_3QTR_V2', 'STUD_SEAT_V2']
 // 'STUD_3QTR', 'STUD_SIDE', 'STUD_REAR', 'STUD_SEAT_ALTA'
 // const VIEW_ANGLES_V2 = ['STUD_3QTR_V2', 'STUD_WHEEL_V2', 'STUD_SEAT_V2']
 
-const PAINT_CODES = ['PBSB', 'PMNG', 'PMSS', 'PPMR', 'PPSB', 'PPSW']
+const PAINT_CODES = [
+  'PBCW',
+  'PBSB',
+  'PMAB',
+  'PMBL',
+  'PMMB',
+  'PMNG',
+  'PMSG',
+  'PMSS',
+  'PMTG',
+  'PPMR',
+  'PPSB',
+  'PPSR',
+  'PPSW',
+  'PPTI',
+  'PPTI'
+]
 
 const M3_GENERIC_CODES = ['MT3', 'W3', 'W4']
 

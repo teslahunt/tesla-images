@@ -32,19 +32,19 @@ test('Model 3 2018', async t => {
   const photos = teslaImages({
     modelLetter: 3,
     optionCodes: [
-      'APF2',
       'APBS',
-      'DV4W',
-      'IN3PB',
-      'PMNG',
-      'PRM31',
-      'SC04',
-      'MDL3',
-      'W38B',
-      'MT303',
+      'APF2',
       'CPF0',
+      'DV4W',
       'FM3U',
-      'RSF1'
+      'IN3PB',
+      'MDL3',
+      'MT303',
+      'PMBL',
+      'PRM31',
+      'RSF1',
+      'SC04',
+      'W38B'
     ]
   })
 
