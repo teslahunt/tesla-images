@@ -523,7 +523,7 @@ test('Model X 2021', async t => {
 test('Model X Plaid', async t => {
   const photos = teslaImages({
     modelLetter: 'x',
-    optionCodes: ['MTX10', 'PPSW', 'WX00', 'IBE00', 'ST0Y']
+    optionCodes: ['MTX10', 'PPSW', 'WX00', 'IBE00', 'ST0Y', 'IC00']
   })
 
   t.true(await isAllReachable(photos))

@@ -51,7 +51,8 @@ const getOptions = ({ optionCodes, model }) => {
       return pick(optionCodes, MY_OPTIONS_CODES)
     }
 
-    case 'ms': {
+    case 'ms':
+    case 'mx': {
       const isRefresh = has(optionCodes, 'ST0Y')
 
       return isRefresh
