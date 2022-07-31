@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.3.6 (2022-07-31)
+
+
+### Bug Fixes
+
+* ensure to omit IC00 for refreshed Model X ([24f5882](https://github.com/teslahunt/tesla-images/commit/24f58824a5d059d67cd319fc2dbd397c9bdad430))
+
 ### 1.3.5 (2022-06-07)
 
 
