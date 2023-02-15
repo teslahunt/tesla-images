@@ -26,12 +26,14 @@ const PAINT_CODES = [
   'PMSG',
   'PMSS',
   'PMTG',
+  'PN00',
   'PPMR',
   'PPSB',
   'PPSR',
   'PPSW',
   'PPTI',
-  'PPTI'
+  'PPTI',
+  'PR00'
 ]
 
 const M3_GENERIC_CODES = ['MT3', 'W3', 'W4']
