@@ -155,7 +155,7 @@ test('Model Y Quicksilver', async t => {
   t.snapshot(photos)
 })
 
-test.only('Model Y Midnight Cherry Red', async t => {
+test('Model Y Midnight Cherry Red', async t => {
   const photos = teslaImages({
     modelLetter: 'y',
     optionCodes: [
@@ -222,6 +222,5 @@ test.only('Model Y Midnight Cherry Red', async t => {
     ]
   })
   t.true(await isAllReachable(photos))
-  console.log(photos)
   t.snapshot(photos)
 })
