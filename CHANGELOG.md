@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.4.0 (2023-06-22)
+
+
+### Features
+
+* add ultra red support ([#10](https://github.com/teslahunt/tesla-images/issues/10)) ([0966157](https://github.com/teslahunt/tesla-images/commit/09661577966ccaac79530914b081bda789ed6e31))
+
 ### 1.3.11 (2023-06-22)
 
 
