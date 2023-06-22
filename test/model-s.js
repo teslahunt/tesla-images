@@ -719,6 +719,7 @@ test('Model S Plaid MTS11 with IC00', async t => {
   t.true(await isAllReachable(photos))
   t.snapshot(photos)
 })
+
 test('Model S Plaid MTS11 with ICW00', async t => {
   const photos = teslaImages({
     modelLetter: 's',
@@ -764,6 +765,16 @@ test('Model S Plaid MTS11 with ICW00', async t => {
     ]
   })
 
+  t.true(await isAllReachable(photos))
+  t.snapshot(photos)
+})
+
+test('Model S Ultra Red', async t => {
+  const photos = teslaImages({
+    modelLetter: 's',
+    optionCodes: ['MTS13', 'PR01', 'WS91', 'IBE00', 'ST03']
+  })
+  console.log(photos)
   t.true(await isAllReachable(photos))
   t.snapshot(photos)
 })
