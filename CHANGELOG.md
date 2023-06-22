@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.3.11 (2023-06-22)
+
+
+### Bug Fixes
+
+* remove debug ([74801e4](https://github.com/teslahunt/tesla-images/commit/74801e400feb13dfdae2f2339ff727cd22ba7035))
+
 ### 1.3.10 (2023-02-15)
 
 ### 1.3.9 (2023-02-15)
