@@ -27,13 +27,15 @@ const PAINT_CODES = [
   'PMSS',
   'PMTG',
   'PN00',
+  'PN01',
   'PPMR',
   'PPSB',
   'PPSR',
   'PPSW',
   'PPTI',
   'PPTI',
-  'PR00'
+  'PR00',
+  'PR01'
 ]
 
 const M3_GENERIC_CODES = ['MT3', 'W3', 'W4']
@@ -79,7 +81,12 @@ const M3_INTERIOR_CODES = [
   'IBB0',
   'IBB1',
   'IBW0',
-  'IBW1'
+  'IBW1',
+  // highland
+  'IPB2',
+  'IPB3',
+  'IPW2',
+  'IPW3'
 ]
 
 const MY_GENERIC_OPTIONS_CODES = ['MTY', 'WY1', 'WY2']
