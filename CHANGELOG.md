@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.5.0 (2023-09-01)
+
+
+### Features
+
+* add highland support ([#11](https://github.com/teslahunt/tesla-images/issues/11)) ([62c3445](https://github.com/teslahunt/tesla-images/commit/62c3445672951f13a71bb80837cfa0d24a7fee3b))
+
 ### 1.4.2 (2023-07-31)
 
 ### 1.4.1 (2023-07-28)
