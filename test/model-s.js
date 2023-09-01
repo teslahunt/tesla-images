@@ -774,7 +774,6 @@ test('Model S Ultra Red', async t => {
     modelLetter: 's',
     optionCodes: ['MTS13', 'PR01', 'WS91', 'IBE00', 'ST03']
   })
-  console.log(photos)
   t.true(await isAllReachable(photos))
   t.snapshot(photos)
 })
