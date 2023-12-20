@@ -87,8 +87,8 @@
   "license": "MIT",
   "ava": {
     "files": [
-      "test/**/*.js",
-      "!test/util.js"
+      "!test/util.js",
+      "test/**/*.js"
     ]
   },
   "commitlint": {
@@ -105,7 +105,7 @@
       "standard-markdown"
     ],
     "package.json": [
-      "finepack --sort-ignore-object-at ava"
+      "finepack"
     ]
   },
   "simple-git-hooks": {
