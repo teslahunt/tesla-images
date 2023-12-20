@@ -543,20 +543,22 @@ test('Model 3 2021', async t => {
   t.snapshot(photos)
 })
 
-test('Model 3 Higland', async t => {
-  const optionCodes = []
+const combinations = []
 
-  for (const interior of ['IPB2', 'IPB3', 'IPW2', 'IPW3']) {
-    for (const wheel of ['W38A', 'W39S']) {
-      for (const color of ['PPSW', 'PBSB', 'PPSB', 'PN01', 'PR01']) {
-        for (const chasis of ['MT351', 'MT352']) {
-          optionCodes.push([chasis, interior, wheel, color])
-        }
+for (const interior of ['IPB2', 'IPB3', 'IPW2', 'IPW3']) {
+  for (const wheel of ['W38A', 'W39S']) {
+    for (const color of ['PPSW', 'PBSB', 'PPSB', 'PN01', 'PR01']) {
+      for (const chasis of ['MT351', 'MT352']) {
+        combinations.push([chasis, interior, wheel, color])
       }
     }
   }
+}
 
-  const photos = optionCodes.flatMap(optionCodes => teslaImages({ modelLetter: 3, optionCodes }))
-  t.true(await isAllReachable(photos))
-  t.snapshot(photos)
-})
+for (const optionCodes of combinations) {
+  test.serial(`Model 3 Highland (${optionCodes.join(', ')})`, async t => {
+    const photos = teslaImages({ modelLetter: 3, optionCodes })
+    t.true(await isAllReachable(photos))
+    t.snapshot({ optionCodes, photos })
+  })
+}
