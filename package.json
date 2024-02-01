@@ -1,7 +1,7 @@
 {
   "name": "tesla-images",
   "description": "Generate Tesla Model S/3/X/Y 3D photo visualizations",
-  "homepage": "https://nicedoc.io/teslahunt/tesla-images",
+  "homepage": "https://github.com/teslahunt/tesla-images",
   "version": "1.5.2",
   "main": "src/index.js",
   "author": {
@@ -51,9 +51,9 @@
     "browserless": "latest",
     "c8": "latest",
     "ci-publish": "latest",
-    "conventional-github-releaser": "latest",
     "finepack": "latest",
     "git-authors-cli": "latest",
+    "github-generate-release": "latest",
     "nano-staged": "latest",
     "npm-check-updates": "latest",
     "p-map": "4",
@@ -73,13 +73,13 @@
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
-    "contributors": "(npx git-authors-cli && npx finepack --sort-ignore-object-at ava && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
+    "contributors": "(npx git-authors-cli && npx finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
     "lint": "standard-markdown README.md && standard",
     "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
     "prerelease": "npm run update:check && npm run contributors",
     "pretest": "npm run lint",
     "release": "standard-version -a",
-    "release:github": "conventional-github-releaser -p angular",
+    "release:github": "github-generate-release",
     "release:tags": "git push --follow-tags origin HEAD:master",
     "test": "c8 ava",
     "update": "ncu -u",
@@ -88,8 +88,8 @@
   "license": "MIT",
   "ava": {
     "files": [
-      "test/**/*.js",
-      "!test/util.js"
+      "!test/util.js",
+      "test/**/*.js"
     ]
   },
   "commitlint": {
