@@ -57,7 +57,7 @@
     "nano-staged": "latest",
     "npm-check-updates": "latest",
     "p-map": "4",
-    "puppeteer": "latest",
+    "puppeteer": "21",
     "reachable-url": "latest",
     "signal-exit": "latest",
     "simple-git-hooks": "latest",
@@ -88,8 +88,8 @@
   "license": "MIT",
   "ava": {
     "files": [
-      "!test/util.js",
-      "test/**/*.js"
+      "test/**/*.js",
+      "!test/util.js"
     ]
   },
   "commitlint": {
