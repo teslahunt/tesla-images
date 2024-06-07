@@ -42,9 +42,7 @@ const getOptions = ({ optionCodes, model }) => {
         has(optionCodes, 'MT') &&
         !M3_NON_REFRESH.some(optionCode => has(optionCodes, optionCode))
 
-      return hasInterior
-        ? pickedOptionCodes
-        : [isRefresh ? 'IBB1' : 'IN3PB'].concat(pickedOptionCodes)
+      return [isRefresh ? 'IBB1' : 'IN3PB'].concat(pickedOptionCodes)
     }
 
     case 'my': {
@@ -94,9 +92,7 @@ module.exports = ({ optionCodes, modelLetter }) => {
   url.searchParams.set('model', model)
   url.searchParams.set(
     'options',
-    getOptions({ optionCodes, model })
-      .sort()
-      .toString()
+    getOptions({ optionCodes, model }).sort().toString()
   )
   url.searchParams.set('size', '800')
 
