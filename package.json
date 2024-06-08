@@ -2,7 +2,7 @@
   "name": "tesla-images",
   "description": "Generate Tesla Model S/3/X/Y 3D photo visualizations",
   "homepage": "https://github.com/teslahunt/tesla-images",
-  "version": "1.5.8",
+  "version": "1.6.0",
   "main": "src/index.js",
   "author": {
     "email": "hello@teslahunt.io",

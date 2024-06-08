@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.6.0 (2024-06-08)
+
+
+### Features
+
+* add hand drive ([#25](https://github.com/teslahunt/tesla-images/issues/25)) ([6960328](https://github.com/teslahunt/tesla-images/commit/6960328320c8e0b5fac64eb78fa8f0bfd661ac8d))
+
 ### 1.5.8 (2024-06-08)
 
 ### 1.5.7 (2024-06-07)
