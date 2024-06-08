@@ -38,8 +38,15 @@ const PAINT_CODES = [
   'PR01'
 ]
 
-const M3_GENERIC_CODES = ['MT3', 'W3', 'W4']
+const M3_GENERIC_CODES = [
+  'MT3', // chasis
+  'W3', // wheels
+  'W4' // wheels
+]
 
+/**
+ * Models before heat pump refresh around October 2020
+ */
 const M3_NON_REFRESH = ['MT30', 'MT31', 'MT336']
 
 const M3_INTERIOR_CODES = [
