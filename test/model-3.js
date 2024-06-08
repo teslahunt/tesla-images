@@ -6,7 +6,29 @@ const teslaImages = require('..')
 
 const { isAllReachable } = require('./util')
 
-test('Model 3 2017', async t => {
+test('Model 3 2017 MT301', async t => {
+  const photos = teslaImages({
+    modelLetter: 3,
+    optionCodes: [
+      'APBS',
+      'DV2W',
+      'IN3PB',
+      'PPMR',
+      'PRM31',
+      'SC04',
+      'MDL3',
+      'W39B',
+      'MT301',
+      'CPF0',
+      'RSF1'
+    ]
+  })
+
+  t.true(await isAllReachable(photos))
+  t.snapshot(photos)
+})
+
+test('Model 3 2017 MT302', async t => {
   const photos = teslaImages({
     modelLetter: 3,
     optionCodes: [
@@ -28,7 +50,7 @@ test('Model 3 2017', async t => {
   t.snapshot(photos)
 })
 
-test('Model 3 2018', async t => {
+test('Model 3 2018 MT303', async t => {
   const photos = teslaImages({
     modelLetter: 3,
     optionCodes: [
@@ -62,10 +84,12 @@ test('Model 3 2019', async t => {
       'APH3',
       'AU3P',
       'BC3B',
+      'BG30',
       'BT37',
       'CDM0',
       'CH06',
       'COAT',
+      'CPF0',
       'DRLH',
       'DV2W',
       'FC3P',
@@ -74,19 +98,26 @@ test('Model 3 2019', async t => {
       'GLFR',
       'HL31',
       'HM31',
+      'I38M',
       'ID3W',
       'IL31',
       'LTPB',
       'MDL3',
+      'MI00',
       'MR31',
+      'OSSB',
       'PBSB',
       'PC30',
+      'PL30',
       'REEU',
       'RF3G',
       'RS3H',
+      'RSF1',
       'S3PB',
       'SA3P',
       'SC04',
+      'SLR0',
+      'ST31',
       'STCP',
       'SU3C',
       'T3MS',
@@ -95,16 +126,7 @@ test('Model 3 2019', async t => {
       'UT3P',
       'W38B',
       'WR00',
-      'ZINV',
-      'MI00',
-      'PL30',
-      'SLR0',
-      'ST31',
-      'BG30',
-      'I38M',
-      'OSSB',
-      'RSF1',
-      'CPF0'
+      'ZINV'
     ]
   })
   t.true(await isAllReachable(photos))
@@ -238,6 +260,33 @@ test('Model 3 2019 MT302', async t => {
       'IN3PB',
       'PRM31',
       'MT302'
+    ]
+  })
+
+  t.true(await isAllReachable(photos))
+  t.snapshot(photos)
+})
+test('Model 3 2019 MT304', async t => {
+  const photos = teslaImages({
+    modelLetter: 3,
+    optionCodes: [
+      'APPB',
+      'APBS',
+      'BC3R',
+      'DV4W',
+      'IN3PB',
+      'PBSB',
+      'PRM31',
+      'SC04',
+      'MDL3',
+      'W32P',
+      'SLR1',
+      'MT304',
+      'PL31',
+      'SPT31',
+      'CPF0',
+      'DRRH',
+      'RSF1'
     ]
   })
 
@@ -472,7 +521,7 @@ test('Model 3 2021 MT323', async t => {
   t.snapshot(photos)
 })
 
-test('Model 3 2021', async t => {
+test('Model 3 2021 MT320', async t => {
   const photos = teslaImages({
     modelLetter: 3,
     optionCodes: [
