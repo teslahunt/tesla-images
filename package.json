@@ -63,10 +63,11 @@
     "simple-git-hooks": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
-    "standard-version": "latest"
+    "standard-version": "latest",
+    "superlock": "latest"
   },
   "engines": {
-    "node": ">= 12"
+    "node": ">= 18"
   },
   "files": [
     "src"
@@ -87,6 +88,7 @@
   },
   "license": "MIT",
   "ava": {
+    "timeout": "2m",
     "files": [
       "test/**/*.js",
       "!test/util.js"
