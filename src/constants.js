@@ -38,6 +38,11 @@ const PAINT_CODES = [
   'PR01'
 ]
 
+const HAND_DRIVE = [
+  'DRLH', // Left Hand Drive
+  'DRRH' // Right Hand Drive
+]
+
 const M3_GENERIC_CODES = [
   'MT3', // chasis
   'W3', // wheels
@@ -106,8 +111,13 @@ module.exports = {
   VIEW_ANGLES_V2,
   M3_INTERIOR_CODES,
   M3_NON_REFRESH,
-  M3_OPTIONS_CODES: M3_GENERIC_CODES.concat(PAINT_CODES, M3_INTERIOR_CODES),
+  M3_OPTIONS_CODES: M3_GENERIC_CODES.concat(
+    HAND_DRIVE,
+    PAINT_CODES,
+    M3_INTERIOR_CODES
+  ),
   MY_OPTIONS_CODES: MY_GENERIC_OPTIONS_CODES.concat(
+    HAND_DRIVE,
     PAINT_CODES,
     MY_INTERIOR_CODES
   ),
