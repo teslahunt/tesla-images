@@ -97,8 +97,10 @@ const M3_INTERIOR_CODES = [
   // highland
   'IPB2',
   'IPB3',
+  'IPB4',
   'IPW2',
-  'IPW3'
+  'IPW3',
+  'IPW4'
 ]
 
 const MY_GENERIC_OPTIONS_CODES = ['MTY', 'WY1', 'WY2']
