@@ -26,6 +26,8 @@ jobs:
         with:
           version: latest
           run_install: true
+      - name: Install Chromium
+        run: npx puppeteer browsers install chrome
       - name: Test
         run: npm test
       - name: Report
