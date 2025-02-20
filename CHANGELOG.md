@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.6.2 (2025-02-20)
+
+
+### Bug Fixes
+
+* remove unused script ([130ed27](https://github.com/teslahunt/tesla-images/commit/130ed27b06510e952e65dbc75f3f8385ef7a62d0))
+
 ### 1.6.1 (2024-06-19)
 
 ## 1.6.0 (2024-06-08)
