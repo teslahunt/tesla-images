@@ -55,7 +55,7 @@
     "git-authors-cli": "latest",
     "github-generate-release": "latest",
     "nano-staged": "latest",
-    "p-map": "4",
+    "p-map": "5",
     "puppeteer": "latest",
     "reachable-url": "latest",
     "signal-exit": "latest",
