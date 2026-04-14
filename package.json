@@ -46,7 +46,6 @@
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
-
     "ava": "5",
     "browserless": "latest",
     "c8": "latest",
